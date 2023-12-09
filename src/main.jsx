@@ -3,17 +3,19 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './App'
 import { createHashRouter, RouterProvider } from 'react-router-dom'
-import Test from './components/test'
 import 'bootstrap/dist/css/bootstrap.min.css';
-  const router = createHashRouter([
+import 'bootstrap/dist/js/bootstrap.bundle'
+import Componente from './components/Ejemplo'
+import Data from './components/Data'
+const router = createHashRouter([
     {
       path:'/',
-      element: <Test/>
+      element:<Componente Datas={Data}/>
     },
     {
       path:'/app',
       element:<App/>  
-    }
+    },
   ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
